@@ -1,0 +1,116 @@
+@font-face {
+    font-family: 'Lora';
+    src: url('fonts/Lora-Regular.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'East Liberty';
+    src: url('fonts/EastLibertySignature.ttf') format('truetype');
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Lora', serif;
+    color: white;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .countdown {
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .countdown div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .countdown span {
+    font-size: 2rem;
+  }
+
+  .name {
+    font-size: 4rem;
+    letter-spacing: 0.25rem;
+    margin: 0;
+  }
+
+  .name-line {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .name-inline {
+    font-family: 'Lora', serif;
+    font-size: 4rem; /* Gleiche Größe wie NADJA */
+    letter-spacing: 0.25rem;
+  }
+  
+  .and-inline {
+    font-family: 'East Liberty', cursive;
+    font-size: 2.2rem;
+    opacity: 0.85;
+    margin-right: 0.25rem;
+  }
+
+  .date {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-top: 3rem;
+  }
+
+  .location {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-top: 0.5rem;
+  }
+
+  .work-note {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    font-size: 0.75rem;
+    font-family: 'Lora', serif;
+    opacity: 0.6;
+    pointer-events: none;
+  }
+
+  @media (max-width: 600px) {
+    .name {
+      font-size: 2.5rem;
+      letter-spacing: 0.15rem;
+    }
+    .name-inline {
+        font-size: 2.5rem;
+      }
+    
+      .and-inline {
+        font-size: 1.6rem;
+      }
+    .date {
+      font-size: 1.1rem;
+    }
+    .location {
+      font-size: 0.95rem;
+    }
+    .countdown span {
+      font-size: 1.5rem;
+    }
+  }
+  
