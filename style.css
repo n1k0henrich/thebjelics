@@ -1,11 +1,6 @@
 @font-face {
-    font-family: 'Lora';
-    src: url('fonts/Lora-Regular.ttf') format('truetype');
-  }
-
-@font-face {
-    font-family: 'East Liberty';
-    src: url('fonts/EastLibertySignature.woff2') format('woff2');
+    font-family: 'The Impressionist';
+    src: url('fonts/theimpressionist-webfont.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
   }
@@ -60,14 +55,15 @@
   
   .name-inline {
     font-family: 'Lora', serif;
-    font-size: 4rem; /* Gleiche Größe wie NADJA */
+    font-size: 4rem;
     letter-spacing: 0.25rem;
   }
   
   .and-inline {
-    font-family: 'East Liberty', cursive;
-    font-size: 2.2rem;
-    opacity: 0.85;
+    font-family: 'The Impressionist', cursive;
+    font-size: 2.8rem;
+    opacity: 0.9;
+    line-height: 1;
   }
 
   .date {
