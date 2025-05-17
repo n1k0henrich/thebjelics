@@ -3,9 +3,11 @@
     src: url('fonts/Lora-Regular.ttf') format('truetype');
   }
 
-  @font-face {
+@font-face {
     font-family: 'East Liberty';
-    src: url('fonts/EastLibertySignature.ttf') format('truetype');
+    src: url('fonts/EastLibertySignature.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
   }
 
   body {
@@ -66,7 +68,6 @@
     font-family: 'East Liberty', cursive;
     font-size: 2.2rem;
     opacity: 0.85;
-    margin-right: 0.25rem;
   }
 
   .date {
