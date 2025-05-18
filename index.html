@@ -8,29 +8,71 @@
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <button id="lang-toggle" class="lang-toggle" aria-label="Sprache wechseln">
+        <svg class="globe-icon" viewBox="0 0 24 24" width="24" height="24" fill="white" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10
+            10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93
+            0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zM11 9H6.26
+            c.74-2.9 3.25-5.2 6.36-5.65V9zm2 0V3.35c1.48.19 2.83.8 3.95
+            1.67L13 9zm4.9 2c-.05 1.08-.36 2.09-.88 2.98L13 11h2c0-1.1-.9-2-2-2h-1V7.26
+            c1.84.31 3.35 1.71 3.9 3.74zM12 22c-1.1 0-2-.9-2-2v-1c1.1 0
+            2-.9 2-2v-2.26l4.24 4.24C15.21 21.29 13.66 22 12 22z"/>
+        </svg>
+      </button> 
     <!-- <script src="lock.js"></script> -->
   <div class="countdown">
-    <div><span id="days">0</span><div>Tagen</div></div>
-    <div><span id="hours">00</span><div>Stunden</div></div>
-    <div><span id="minutes">00</span><div>Minuten</div></div>
-    <div><span id="seconds">00</span><div>Sekunden</div></div>
+    <div><span id="days">0</span><div id="label-days">Tage</div></div>
+    <div><span id="hours">00</span><div id="label-hours">Stunden</div></div>
+    <div><span id="minutes">00</span><div id="label-minutes">Minuten</div></div>
+    <div><span id="seconds">00</span><div id="label-seconds">Sekunden</div></div>
   </div>
 
   <div class="name-block">
-    <div class="name-line name-top">
-      <span class="name-inline">NADJA</span>
+    <div class="name-top">
+      <span class="name-nadja">NADJA</span>
     </div>
-    <div class="name-line name-bottom">
-        <span class="and-inline">und</span>
-        <span class="name-inline">NIKO</span>
+    <div class="name-bottom">
+      <span id="und" class="name-und">und</span>
+      <span class="name-niko">NIKO</span>
     </div>
   </div>
 
   <h2 class="date">11.03.2026</h2>
-  <h3 class="location">Koh Samui &middot; Thailand</h3>
+  <h3 id="location" class="location">Koh Samui &middot; Thailand</h3>
 
-  <div class="work-note">Work in progress...</div>
+  <div class="work-note">work in progress...</div>
 
   <script src="countdown.js"></script>
+
+  <script>
+    const translations = {
+      de: {
+        und: "und",
+        days: "Tage",
+        hours: "Stunden",
+        minutes: "Minuten",
+        seconds: "Sekunden"
+      },
+      en: {
+        und: "and",
+        days: "Days",
+        hours: "Hours",
+        minutes: "Minutes",
+        seconds: "Seconds"
+      }
+    };
+  
+    let currentLang = "de";
+  
+    document.getElementById("lang-toggle").addEventListener("click", () => {
+      currentLang = currentLang === "de" ? "en" : "de";
+  
+      document.getElementById("und").textContent = translations[currentLang].und;
+      document.getElementById("label-days").textContent = translations[currentLang].days;
+      document.getElementById("label-hours").textContent = translations[currentLang].hours;
+      document.getElementById("label-minutes").textContent = translations[currentLang].minutes;
+      document.getElementById("label-seconds").textContent = translations[currentLang].seconds;
+    });
+  </script>
 </body>
 </html>
