@@ -45,16 +45,18 @@
 
   .countdown {
     display: flex;
-    gap: 1rem;
-    margin-bottom: 2rem;
     justify-content: center;
+    flex-wrap: nowrap; /* verhindert Umbruch */
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
     transform: translateY(-5rem) translateX(-0.2rem);
   }
   
   .countdown div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  min-width: 65px; /* reduziert Breite der Felder */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   }
   
   .countdown span {
@@ -162,20 +164,26 @@
       }
     .date {
       font-size: 1.5rem;
+      transform: translateY(0.5rem);
     }
     .location {
       font-size: 0.95rem;
+      transform: translateY(-1rem)
     }
     .countdown {
-        flex-wrap: wrap;
+        display: flex;
         justify-content: center;
-        gap: 0.5rem 1rem;
-        text-align: center;
+        flex-wrap: nowrap; /* verhindert Umbruch */
+        gap: 0.5rem;
+        margin-bottom: 1.5rem;
         transform: translateY(-1.5rem);
       }
     
       .countdown div {
-        min-width: 80px; /* optional: gleiche Breite für alle Felder */
+        min-width: 65px; /* reduziert Breite der Felder */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
     
       .countdown span {
