@@ -1,78 +1,81 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Bjelics Wedding</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nadja & Niko</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <button id="lang-toggle" class="lang-toggle" aria-label="Sprache wechseln">
-        <svg class="globe-icon" viewBox="0 0 24 24" width="24" height="24" fill="white" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10
-            10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93
-            0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zM11 9H6.26
-            c.74-2.9 3.25-5.2 6.36-5.65V9zm2 0V3.35c1.48.19 2.83.8 3.95
-            1.67L13 9zm4.9 2c-.05 1.08-.36 2.09-.88 2.98L13 11h2c0-1.1-.9-2-2-2h-1V7.26
-            c1.84.31 3.35 1.71 3.9 3.74zM12 22c-1.1 0-2-.9-2-2v-1c1.1 0
-            2-.9 2-2v-2.26l4.24 4.24C15.21 21.29 13.66 22 12 22z"/>
-        </svg>
-      </button> 
-    <!-- <script src="lock.js"></script> -->
-  <div class="countdown">
-    <div><span id="days">0</span><div id="label-days">Tage</div></div>
-    <div><span id="hours">00</span><div id="label-hours">Stunden</div></div>
-    <div><span id="minutes">00</span><div id="label-minutes">Minuten</div></div>
-    <div><span id="seconds">00</span><div id="label-seconds">Sekunden</div></div>
-  </div>
-
-  <div class="name-block">
-    <div class="name-top">
-      <span class="name-nadja">NADJA</span>
+    <!-- Hamburger-Menü -->
+    <div class="hamburger-menu">
+        <button class="hamburger-btn" aria-label="Toggle menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <nav class="menu">
+            <ul>
+                <li><a href="#home" class="scroll-link">Home</a></li>
+                <li><a href="#event" class="scroll-link">Event</a></li>
+                <li><a href="#location" class="scroll-link">Location</a></li>
+                <li><a href="#dresscode" class="scroll-link">Dresscode</a></li>
+                <li><a href="#thailand" class="scroll-link">Thailand</a></li>
+            </ul>
+        </nav>
     </div>
-    <div class="name-bottom">
-      <span id="und" class="name-und">und</span>
-      <span class="name-niko">NIKO</span>
+
+    <!-- Language Toggle (immer oben rechts sichtbar) -->
+    <div class="lang-toggle">
+        <button aria-label="Toggle language">
+            <svg class="globe-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 18a8 8 0 01-8-8c0-1.72.6-3.3 1.6-4.56L12 14v4zm0-6L5.6 7.44A8 8 0 0112 4v10zm6.4-6.56L12 14V4a8 8 0 016.4 3.44z"/>
+            </svg>
+        </button>
     </div>
-  </div>
 
-  <h2 class="date">11.03.2026</h2>
-  <h3 id="location" class="location">Koh Samui &middot; Thailand</h3>
+    <!-- Hauptseite als Sektion -->
+    <section id="home" class="content-section">
+        <div class="countdown">
+            <div><span id="days">0</span><div>Tage</div></div>
+            <div><span id="hours">00</span><div>Stunden</div></div>
+            <div><span id="minutes">00</span><div>Minuten</div></div>
+            <div><span id="seconds">00</span><div>Sekunden</div></div>
+        </div>
+        <div class="name-block">
+            <div class="name-top">
+                <span class="name-nadja">NADJA</span>
+            </div>
+            <div class="name-bottom">
+                <span class="name-und">und</span>
+                <span class="name-niko">NIKO</span>
+            </div>
+        </div>
+        <div class="date">11.03.2026</div>
+        <div class="location">Koh Samui · Thailand</div>
+        <div class="work-note">work in progress...</div>
+        <script src="countdown.js"></script>
+    </section>
 
-  <div class="work-note">work in progress...</div>
+    <!-- Weitere Sektionen -->
+    <section id="event" class="content-section">
+        <h2>Event</h2>
+        <p>Unsere Hochzeit findet am 11. März 2026 statt. Die Zeremonie beginnt um 14:00 Uhr, gefolgt von einer Feier bis Mitternacht.</p>
+    </section>
+    <section id="location" class="content-section">
+        <h2>Location</h2>
+        <p>Die Hochzeit wird auf Koh Samui, Thailand, stattfinden. Die genaue Adresse folgt bald.</p>
+    </section>
+    <section id="dresscode" class="content-section">
+        <h2>Dresscode</h2>
+        <p>Wir bitten um einen festlichen Dresscode: Damen in eleganten Kleidern, Herren in Anzügen oder traditioneller thailändischer Kleidung.</p>
+    </section>
+    <section id="thailand" class="content-section">
+        <h2>Thailand</h2>
+        <p>Koh Samui ist eine wunderschöne Insel mit traumhaften Stränden. Wir empfehlen, ein paar Tage für Erkundungen einzuplanen!</p>
+    </section>
 
-  <script src="countdown.js"></script>
-
-  <script>
-    const translations = {
-      de: {
-        und: "und",
-        days: "Tage",
-        hours: "Stunden",
-        minutes: "Minuten",
-        seconds: "Sekunden"
-      },
-      en: {
-        und: "and",
-        days: "Days",
-        hours: "Hours",
-        minutes: "Minutes",
-        seconds: "Seconds"
-      }
-    };
-  
-    let currentLang = "de";
-  
-    document.getElementById("lang-toggle").addEventListener("click", () => {
-      currentLang = currentLang === "de" ? "en" : "de";
-  
-      document.getElementById("und").textContent = translations[currentLang].und;
-      document.getElementById("label-days").textContent = translations[currentLang].days;
-      document.getElementById("label-hours").textContent = translations[currentLang].hours;
-      document.getElementById("label-minutes").textContent = translations[currentLang].minutes;
-      document.getElementById("label-seconds").textContent = translations[currentLang].seconds;
-    });
-  </script>
+    <script src="script.js"></script>
 </body>
 </html>
