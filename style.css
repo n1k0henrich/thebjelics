@@ -8,7 +8,6 @@
 body {
   margin: 0;
   padding: 0;
-  background: url('background.jpg') no-repeat center center fixed;
   background-size: cover;
   font-family: 'Lora', serif;
   color: white;
@@ -19,29 +18,6 @@ body {
   justify-content: flex-start;
   align-items: center;
   overflow-x: hidden;
-}
-
-.lang-toggle {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  z-index: 100;
-  padding: 0;
-}
-
-.globe-icon {
-  width: 2rem;
-  height: 2rem;
-  fill: white;
-  opacity: 0.8;
-  transition: opacity 0.2s;
-}
-
-.lang-toggle:hover .globe-icon {
-  opacity: 1;
 }
 
 .countdown {
@@ -222,7 +198,7 @@ body {
 }
 
 #home.content-section {
-  background: none;
+  background: url('background.jpg') no-repeat center center fixed;
   padding: 0;
   margin: 0 auto;
   min-height: 100vh;
@@ -253,6 +229,75 @@ body {
   line-height: 1.6;
   max-width: 600px;
   margin: 0 auto;
+}
+
+#event.content-section {
+  background: url('Event.jpg') no-repeat center center fixed;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+.schedule-section {
+  background: url('event_background_lighter.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 6rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.schedule-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.schedule-subtitle {
+  font-size: 0.9rem;
+  letter-spacing: 0.15rem;
+  opacity: 0.85;
+  margin-bottom: 1rem;
+}
+
+.schedule-title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0.05rem;
+  margin-bottom: 4rem;
+}
+
+.schedule-times {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+.schedule-item {
+  min-width: 120px;
+}
+
+.schedule-item .time {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.schedule-item .label {
+  font-size: 0.85rem;
+  letter-spacing: 0.1rem;
+  opacity: 0.9;
 }
 
 /* Responsive Anpassungen */
@@ -315,7 +360,6 @@ body {
       font-size: 0.9rem;
   }
 }
-
 @media (max-height: 500px) and (orientation: landscape) {
   .countdown {
       transform: translateY(-2rem) translateX(-0.2rem);
