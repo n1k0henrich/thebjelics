@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetSection = document.getElementById(targetId);
             if (targetSection) {
                 window.scrollTo({
-                    top: targetSection.offsetTop - 50, // 50px Offset für bessere Sichtbarkeit
+                    top: targetSection.offsetTop - 0, // 50px Offset für bessere Sichtbarkeit
                     behavior: 'smooth'
                 });
             }

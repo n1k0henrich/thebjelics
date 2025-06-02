@@ -284,7 +284,7 @@ body {
 .location-right {
   flex: 1;
   min-width: 200px;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   letter-spacing: 0.05rem;
   line-height: 1.5;
 }
