@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Hamburger-Menü Toggle
     const hamburgerBtn = document.querySelector('.hamburger-btn');
     const menu = document.querySelector('.menu');
+    const bars = document.querySelectorAll('.hamburger-btn .bar');
+    const menuLinks = document.querySelectorAll('.menu a');
 
     hamburgerBtn.addEventListener('click', () => {
         hamburgerBtn.classList.toggle('active');
@@ -13,18 +15,45 @@ document.addEventListener('DOMContentLoaded', () => {
     scrollLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
-            const targetId = link.getAttribute('href').substring(1); // Entfernt das "#" aus "#event"
+            const targetId = link.getAttribute('href').substring(1);
             const targetSection = document.getElementById(targetId);
             if (targetSection) {
                 window.scrollTo({
-                    top: targetSection.offsetTop - 0, // 50px Offset für bessere Sichtbarkeit
+                    top: targetSection.offsetTop,
                     behavior: 'smooth'
                 });
             }
 
-            // Schließe das Menü nach dem Klick
+            // Menü schließen
             hamburgerBtn.classList.remove('active');
             menu.classList.remove('active');
         });
     });
+
+    // Farbwechsel für Icon + Menü-Links basierend auf Scrollposition
+    function updateMenuColors() {
+        const scrollY = window.scrollY;
+        const locationSection = document.getElementById('location');
+        const dresscodeSection = document.getElementById('dresscode');
+
+        const inBrightSection = (section) => {
+            const top = section.offsetTop;
+            const height = section.offsetHeight;
+            return scrollY >= top && scrollY < top + height;
+        };
+
+        const isBright = inBrightSection(locationSection) || inBrightSection(dresscodeSection);
+
+        bars.forEach(bar => {
+            bar.style.backgroundColor = isBright ? 'black' : 'white';
+        });
+
+        menuLinks.forEach(link => {
+            link.style.color = isBright ? 'black' : 'white';
+        });
+    }
+
+    // Initial und beim Scrollen ausführen
+    updateMenuColors();
+    window.addEventListener('scroll', updateMenuColors);
 });

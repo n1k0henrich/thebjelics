@@ -115,23 +115,43 @@ body {
 }
 
 .hamburger-btn {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  width: 2rem;
+  height: 2rem;
+  z-index: 101;
   background: none;
   border: none;
   cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
 }
 
-.bar {
+.hamburger-btn .bar {
+  position: absolute;
   width: 2rem;
-  height: 0.2rem;
-  background: white;
+  height: 2px;
+  background-color: white;
+  left: 0;
   transition: all 0.3s ease;
 }
 
+/* Positionierung der Balken */
+.hamburger-btn .bar:nth-child(1) {
+  top: 0.2rem;
+}
+
+.hamburger-btn .bar:nth-child(2) {
+  top: 0.9rem;
+}
+
+.hamburger-btn .bar:nth-child(3) {
+  top: 1.6rem;
+}
+
+/* X-Zustand */
 .hamburger-btn.active .bar:nth-child(1) {
-  transform: rotate(45deg) translate(0.5rem, 0.5rem);
+  transform: rotate(45deg);
+  top: 0.9rem;
 }
 
 .hamburger-btn.active .bar:nth-child(2) {
@@ -139,7 +159,8 @@ body {
 }
 
 .hamburger-btn.active .bar:nth-child(3) {
-  transform: rotate(-45deg) translate(0.5rem, -0.5rem);
+  transform: rotate(-45deg);
+  top: 0.9rem;
 }
 
 .menu {
@@ -148,7 +169,7 @@ body {
   left: -250px;
   width: 250px;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.8);
+  background: transparent;
   transition: left 0.3s ease;
   z-index: 99;
 }
@@ -170,7 +191,7 @@ body {
 .menu a {
   color: white;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   font-weight: 300;
   display: block;
   padding: 0.5rem;
@@ -309,6 +330,67 @@ body {
   display: block;
   margin: 0 auto;
   object-fit: cover;
+}
+
+.section-divider {
+  width: 100%;
+  height: 0.5px;
+  background-color: black;
+  border: none;
+  margin: auto;
+}
+
+#dresscode {
+  background-color: #f7f6f4;
+  color: #111;
+  padding: 6rem 2rem;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Lora', serif;
+}
+
+.dresscode-title {
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0.05rem;
+  margin-bottom: 2rem;
+}
+
+.dresscode-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+}
+
+.dresscode-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.dresscode-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.dresscode-text {
+  flex: 1;
+  min-width: 300px;
+  text-align: left;
+}
+
+.dresscode-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
 }
 
 /* Responsive Anpassungen */
