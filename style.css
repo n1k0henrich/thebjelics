@@ -13,10 +13,11 @@ body {
   color: white;
   text-align: center;
   min-height: 100vh;
-  display: flex;
+  /* Entferne diese 3 Zeilen: */
+  /* display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
+  align-items: center; */
   overflow-x: hidden;
 }
 
@@ -226,6 +227,62 @@ body {
   align-items: center;
   border-radius: 0;
 }
+.welcome-dinner-section {
+  background-color: #f7f6f4;
+  color: #111;
+  padding: 0rem 0rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Lora', serif;
+  text-align: center;
+}
+
+.welcome-image {
+  position: relative;
+  width: 100vw;
+  height: 66vh;
+  overflow: hidden;
+}
+
+.welcome-image {
+  position: relative;
+  width: 100vw;
+  height: 100vh; /* statt 66vh */
+  overflow: hidden;
+}
+
+.welcome-dinner-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  color: white;
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0.05rem;
+  margin-bottom: 4rem;
+}
+
+.welcome-info {
+  margin-top: 2rem;
+  display: flex;
+  gap: 4rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.welcome-item h3 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.welcome-item p {
+  font-size: 1.2rem;
+}
 
 #event.content-section {
   background: url('Event.jpg') no-repeat center center fixed;
@@ -309,6 +366,7 @@ body {
   letter-spacing: 0.05rem;
   line-height: 1.5;
 }
+
 
 .location-center {
   flex: 2;
